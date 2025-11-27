@@ -1,0 +1,146 @@
+:root {
+  --primary-bg: #f4f6fb;
+  --accent: #646cff;
+  --accent-dark: #474eea;
+  --card-bg: #fff;
+  --card-shadow: rgba(100, 108, 255, 0.07) 0px 4px 12px;
+  --text: #222;
+  --button-bg: #646cff;
+  --button-hover: #474eea;
+  --button-text: #fff;
+  --completed-bg: #e3fcec;
+  --completed-text: #317773;
+  --delete-bg: #ff647f;
+  --delete-hover: #e8496f;
+}
+
+#root {
+  max-width: 600px;
+  margin: 35px auto;
+  padding: 2rem;
+  text-align: center;
+  background: var(--primary-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+}
+
+/* Logo styles remain unchanged */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--accent));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 1.5em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Form and input styles */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#inp {
+  display: flex;
+  gap: 1rem;
+}
+
+input[type='text'] {
+  padding: 0.7em;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 220px;
+}
+
+button[type="submit"], .task-list button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: 6px;
+}
+
+button[type="submit"]:hover, .task-list button:hover {
+  background: var(--button-hover);
+}
+
+/* Special style for Delete button */
+.task-list button:last-child {
+  background: var(--delete-bg);
+}
+.task-list button:last-child:hover {
+  background: var(--delete-hover);
+}
+
+/* Select styles */
+#btns select {
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+/* Task list styles */
+.task-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list ul li {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.task-list ul li.completed {
+  background: var(--completed-bg);
+  color: var(--completed-text);
+  text-decoration: line-through;
+}
+
+.task-list ul li > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.task-list ul li div > div:last-child {
+  display: flex;
+  gap: 10px;
+}
+
+.task-list small {
+  color: #6074a2;
+  margin-left: 8px;
+  font-size: 0.95em;
+}
+
